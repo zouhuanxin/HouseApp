@@ -17,23 +17,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.activity.UserActivity">
+        <activity android:name=".ui.activity.RootActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.activity.MyActivity" />
+        <activity android:name=".ui.activity.UserActivity">
 
         </activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="design_width_in_dp"
-            android:value="375" />
+            android:value="475" />
         <meta-data
             android:name="design_height_in_dp"
-            android:value="667" />
+            android:value="867" />
     </application>
 
 </manifest>

@@ -17,7 +17,7 @@
             android:layout_margin="@dimen/dp_10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="登录"
+            android:text="登录即注册"
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="25sp"
@@ -30,26 +30,40 @@
             android:layout_below="@+id/tv_login_title"
             android:layout_width="match_parent"
             android:layout_height="50dp"/>
-        <EditText
-            android:background="@drawable/shape_login_etline"
-            android:inputType="textPassword"
-            android:layout_margin="@dimen/dp_10"
-            android:id="@+id/et_login_pwd"
-            android:hint="密码"
+        <RelativeLayout
+            android:id="@+id/rl_login_pwd"
             android:layout_below="@+id/et_login_name"
             android:layout_width="match_parent"
-            android:layout_height="50dp"/>
+            android:layout_height="wrap_content">
+            <EditText
+                android:background="@drawable/shape_login_etline"
+                android:layout_margin="@dimen/dp_10"
+                android:id="@+id/et_login_pwd"
+                android:hint="验证码"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"/>
+            <TextView
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="获取验证码"/>
+        </RelativeLayout>
+
         <Button
             android:textColor="@color/white"
             android:background="@drawable/shape_login_btn_bg"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btn_login"
-            android:layout_below="@id/et_login_pwd"
+            android:layout_below="@id/rl_login_pwd"
             android:layout_margin="@dimen/dp_10"
             android:text="@string/app_name"
             android:enabled="false"/>
         <TextView
+            android:visibility="gone"
             android:layout_margin="@dimen/dp_10"
             android:layout_below="@+id/btn_login"
             android:id="@+id/tv_login_register"
@@ -57,6 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
+            android:visibility="gone"
             android:layout_alignParentRight="true"
             android:layout_margin="@dimen/dp_10"
             android:layout_below="@+id/btn_login"

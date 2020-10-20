@@ -77,6 +77,8 @@ dependencies {
     implementation rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
     implementation rootProject.ext.dependencies["base-recyclerview-adapter"]
+    implementation rootProject.ext.dependencies["qmui"]
+    implementation rootProject.ext.dependencies["qmuiteam-arch"]
     implementation 'com.alibaba:fastjson:1.2.48'
     //悬浮菜单
     implementation 'com.github.clans:fab:1.6.4'

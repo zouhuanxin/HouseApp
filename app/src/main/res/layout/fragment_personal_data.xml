@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.PersonalDataFragment">
+
+    <include layout="@layout/layout_top_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:orientation="vertical"
+            android:background="@drawable/shape_my_bg">
+
+            <RelativeLayout
+                android:id="@+id/rl_iv_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:text="头像"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/iv_my_head"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_toLeftOf="@+id/iv_my_next"
+                    android:src="@mipmap/icon_test" />
+
+                <ImageView
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/iv_my_next"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/icon_next" />
+            </RelativeLayout>
+            <com.zhx.houseapp.ui.custom.PersonalLayout
+                android:id="@+id/pl_nick_name"
+                style="@style/text_my_style1"
+                android:layout_below="@+id/rl_iv_head"
+                app:title_text="昵称"
+                app:content_text="@string/app_name"/>
+            <com.zhx.houseapp.ui.custom.PersonalLayout
+                android:id="@+id/pl_user"
+                style="@style/text_my_style1"
+                android:layout_below="@+id/pl_nick_name"
+                app:title_text="账号"
+                app:content_text="18296992423"/>
+            <com.zhx.houseapp.ui.custom.PersonalLayout
+                android:id="@+id/pl_sex"
+                style="@style/text_my_style1"
+                android:layout_below="@+id/pl_nick_name"
+                app:title_text="性别"
+                app:content_text="男"/>
+            <com.zhx.houseapp.ui.custom.PersonalLayout
+                android:id="@+id/pl_address"
+                style="@style/text_my_style1"
+                android:layout_below="@+id/pl_nick_name"
+                app:title_text="常住地"
+                app:content_text="**"/>
+            <com.zhx.houseapp.ui.custom.PersonalLayout
+                android:id="@+id/pl_introduction"
+                android:layout_marginBottom="20dp"
+                style="@style/text_my_style1"
+                android:layout_below="@+id/pl_nick_name"
+                app:title_text="简介"
+                app:content_text="********"/>
+            <Button
+                android:id="@+id/btn_out"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginBottom="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_my_person_bg"
+                android:text="退出登录"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

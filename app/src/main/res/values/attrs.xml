@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PersonalLayout">
+        <attr name="title_text" format="string"/>
+        <attr name="content_text" format="string"/>
+        <attr name="tv_visibility" format="boolean"/>
+        <attr name="iv_visibility" format="boolean"/>
+    </declare-styleable>
+</resources>
