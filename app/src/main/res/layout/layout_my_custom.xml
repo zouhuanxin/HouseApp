@@ -10,6 +10,7 @@
         android:text="@string/app_name"
         android:id="@+id/tv_custom_title"/>
     <EditText
+        android:background="#ffffff"
         android:layout_toLeftOf="@+id/iv_custom_next"
         android:layout_marginRight="20dp"
         android:id="@+id/tv_custom_content"

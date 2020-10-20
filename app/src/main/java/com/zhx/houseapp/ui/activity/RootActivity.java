@@ -16,8 +16,6 @@ import butterknife.ButterKnife;
 import me.yokeyword.fragmentation.anim.FragmentAnimator;
 
 public class RootActivity extends BaseActivity {
-
-
     @BindView(R.id.et_search)
     EditText etSearch;
     @BindView(R.id.btn_search)
@@ -32,11 +30,18 @@ public class RootActivity extends BaseActivity {
 
     @Override
     public void initData() {
-
         ivMy.setOnClickListener(view -> {
-            Intent intent = new Intent(RootActivity.this,UserActivity.class);
-            intent.putExtra(CommUtils.MAIN_ACTIVITY_CODE,CommUtils.MY_TYPE);
-            startActivity(intent);
+            boolean is_login = false;
+            if (is_login){
+                Intent intent = new Intent(RootActivity.this,UserActivity.class);
+                intent.putExtra(CommUtils.MAIN_ACTIVITY_CODE,CommUtils.LOGIN_TYPE);
+                startActivity(intent);
+            }else {
+                Intent intent = new Intent(RootActivity.this,UserActivity.class);
+                intent.putExtra(CommUtils.MAIN_ACTIVITY_CODE,CommUtils.MY_TYPE);
+                startActivity(intent);
+            }
+
         });
     }
 

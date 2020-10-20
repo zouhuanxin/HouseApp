@@ -56,11 +56,11 @@ public class LoginFragment extends BaseFragment {
         switch (view.getId()){
             case R.id.tv_login_register:
                 ToastUtils.showLong("不会吧不会吧，你竟然用我们的软件啊");
-                start(RegisterFragment.getInstance());
+//                start(RegisterFragment.getInstance());
                 break;
             case R.id.tv_login_forget_pwd:
                 ToastUtils.showLong("哎呀，这谁啊，密码都能忘记");
-                start(ResetFragment.newInstance());
+//                start(ResetFragment.newInstance());
                 break;
             default:
                 break;

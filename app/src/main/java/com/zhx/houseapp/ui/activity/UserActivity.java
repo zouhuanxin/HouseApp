@@ -26,12 +26,15 @@ public class UserActivity extends BaseActivity {
         int type = getIntent().getIntExtra(CommUtils.MAIN_ACTIVITY_CODE, 0);
         switch (type) {
             case CommUtils.MAIN_TYPE:
-                loadRootFragment(R.id.fl_content, LoginFragment.newInstance());
+//                loadRootFragment(R.id.fl_content, LoginFragment.newInstance());
                 break;
             case CommUtils.SUB_TYPE:
-                loadRootFragment(R.id.fl_content, LoginFragment.newInstance());
+//                loadRootFragment(R.id.fl_content, LoginFragment.newInstance());
                 break;
             case CommUtils.MY_TYPE:
+                loadRootFragment(R.id.fl_content, MyFragment.newInstance());
+                break;
+            case CommUtils.LOGIN_TYPE:
                 loadRootFragment(R.id.fl_content, MyFragment.newInstance());
                 break;
         }

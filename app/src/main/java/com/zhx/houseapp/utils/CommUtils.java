@@ -13,4 +13,5 @@ public class CommUtils {
     public static final int MAIN_TYPE = 0;
     public static final int MY_TYPE = 2;
     public static final int SUB_TYPE = 1;
+    public static final int LOGIN_TYPE = 3;
 }
